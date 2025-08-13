@@ -141,7 +141,7 @@
     {
       "parameters": {
         "mode": "raw",
-        "jsonOutput": "{\n  \"country\": \"us\",\n  \"category\": \"technology\",\n  \"query\": \"google\"\n}",
+        "jsonOutput": "{\n  \"country\": \"us\",\n  \"category\": \"technology\",\n  \"query\": \"google\",\n  \"key\": \"80fccc29fde94b4e837ff7db7677eca4\"\n}",
         "options": {}
       },
       "id": "f5170e93-4bba-474c-aa0f-5ee5c063f57d",
@@ -161,7 +161,7 @@
           "parameters": [
             {
               "name": "X-Api-Key",
-              "value": "80fccc29fde94b4e837ff7db7677eca4"
+              "value": "={{ $json.key }}"
             }
           ]
         },
@@ -421,6 +421,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-13T13:44:10.000Z",
-  "versionId": "ff288a7c-7d2f-4bd6-91e1-019633fe08d1"
+  "updatedAt": "2025-08-13T14:18:28.000Z",
+  "versionId": "8a36bebf-14ee-408f-a7ca-37c145a6a5b2"
 }
