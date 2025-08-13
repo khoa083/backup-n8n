@@ -299,8 +299,8 @@
         },
         "repository": {
           "__rl": true,
-          "mode": "name",
-          "value": "n8n-workflows"
+          "value": "backup-n8n",
+          "mode": "name"
         },
         "filePath": "={{ $('Config').item.json.sub_path }}/{{$('Loop Over Items').item.json.name}}.json",
         "fileContent": "={{$('isDiffOrNew').item.json[\"n8n_data_stringy\"]}}",
@@ -504,19 +504,19 @@
               "id": "03f51f9c-4681-4423-91d2-d32f4c18d6bc",
               "name": "repo_owner",
               "type": "string",
-              "value": ""
+              "value": "khoa083"
             },
             {
               "id": "0c9b521a-b698-4b43-9eb0-bbf744760158",
               "name": "repo_name",
               "type": "string",
-              "value": "n8n-workflows"
+              "value": "backup-n8n"
             },
             {
               "id": "91627e70-a71a-4be0-a6f6-b04d5c8469d8",
               "name": "repo_path",
               "type": "string",
-              "value": "n8n-workflows"
+              "value": "backup-n8n"
             },
             {
               "id": "983a2c87-9d69-4d64-ab88-ec1b1117c6e6",
@@ -729,6 +729,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-12T16:03:42.000Z",
-  "versionId": "a1225b53-9041-4888-89b4-613fc6210428"
+  "updatedAt": "2025-08-13T13:30:36.000Z",
+  "versionId": "359827e2-3f3a-4b47-9e45-d1ace98a588a"
 }
