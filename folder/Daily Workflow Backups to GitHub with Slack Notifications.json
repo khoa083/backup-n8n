@@ -286,7 +286,8 @@
           "id": "FlsFLsHA0CJ5AarX",
           "name": "GitHub account"
         }
-      }
+      },
+      "onError": "continueErrorOutput"
     },
     {
       "parameters": {
@@ -320,7 +321,8 @@
           "id": "FlsFLsHA0CJ5AarX",
           "name": "GitHub account"
         }
-      }
+      },
+      "onError": "continueErrorOutput"
     },
     {
       "parameters": {
@@ -648,7 +650,7 @@
         208
       ],
       "typeVersion": 4.2,
-      "disabled": true
+      "onError": "continueErrorOutput"
     },
     {
       "parameters": {
@@ -730,6 +732,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-13T13:56:26.000Z",
-  "versionId": "8aa335f5-597a-438b-8498-6ca12f06f14c"
+  "updatedAt": "2025-08-13T14:08:01.000Z",
+  "versionId": "e381ca44-2482-4aad-b14e-434bd4311817"
 }
