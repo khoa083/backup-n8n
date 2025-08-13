@@ -1,0 +1,426 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set User Config (Country, Category, Query)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set User Config (Country, Category, Query)": {
+      "main": [
+        [
+          {
+            "node": "Fetch News Articles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch News Articles": {
+      "main": [
+        [
+          {
+            "node": "Merge Config with Articles",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Limit to Top 10 Trends",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Config with Articles": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inject Config Data": {
+      "main": [
+        [
+          {
+            "node": "Merge Config with Articles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit to Top 10 Trends": {
+      "main": [
+        [
+          {
+            "node": "Inject Config Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Post to Slack1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-12T16:57:27.020Z",
+  "id": "KIQUOQXVsFn7rxdW",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "testData",
+  "nodes": [
+    {
+      "parameters": {
+        "content": ""
+      },
+      "id": "504507d2-d48d-413a-b693-6c8bd926d6d2",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2976,
+        -48
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "9be0c5fb-186d-41f1-bb88-1893a3119f8c",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        -2144,
+        -656
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "content": "## ⚙️ Workflow Breakdown\n1. **Schedule Trigger:** Set frequency (daily, weekly, etc.)\n2. **Set News Config:** Configure country, category, and query.\n3. **Fetch News Articles:** Pulls from NewsAPI.\n4. **[Optional] Limit to Top 10 Trends:** Cap articles to 10, or remove to let GPT decide.\n5. **Inject Config Data:** Makes config accessible to GPT.\n6. **Merge:** Combines news + config.\n7. **GPT Summary:** Summarizes, prioritizes top 10, tags sentiment, links back to query.\n8. **Slack Post:** Auto-delivers insights to Slack.",
+        "height": 304,
+        "width": 624,
+        "color": 7
+      },
+      "id": "6633464b-a441-433a-a993-7f37a8f38902",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2256,
+        -1232
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"country\": \"us\",\n  \"category\": \"technology\",\n  \"query\": \"google\"\n}",
+        "options": {}
+      },
+      "id": "f5170e93-4bba-474c-aa0f-5ee5c063f57d",
+      "name": "Set User Config (Country, Category, Query)",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -1648,
+        -656
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "url": "=https://newsapi.org/v2/top-headlines?country={{ $json.country }}&category={{ $json.category }}&q={{ $json.query }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "80fccc29fde94b4e837ff7db7677eca4"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "24e31f6a-fda6-4e7a-9ea0-f461b9bd67ec",
+      "name": "Fetch News Articles",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -1168,
+        -656
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "63af95d6-6e96-464d-8c40-a329bb240486",
+      "name": "Merge Config with Articles",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        -240,
+        -672
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"country\": \"us\",\n  \"category\": \"technology\",\n  \"query\": \"AI\"\n}",
+        "options": {}
+      },
+      "id": "7f2555e7-0f0e-4c8f-82de-096c2341e9e2",
+      "name": "Inject Config Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -448,
+        -784
+      ],
+      "typeVersion": 3.4,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const topTen = items.slice(0, 10);\nreturn topTen;"
+      },
+      "id": "28512b17-4ca3-48ff-8729-c35ca16a3f41",
+      "name": "Limit to Top 10 Trends",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -688,
+        -784
+      ],
+      "typeVersion": 2,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## Inject Config Settings\n\nSet your **country, category, and query** (keyword) here.\n\n✅ This controls the NewsAPI request and instructs GPT on which industry focus to prioritize in its analysis.\n",
+        "height": 416,
+        "width": 416,
+        "color": 7
+      },
+      "id": "3e35d64d-4ac8-445a-825b-64ab5fca9e83",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1808,
+        -848
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Fetch Latest News Headlines\n[Read more about HTTP Request node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/)\n\nThis step pulls up to 100 top headlines from NewsAPI for your selected country, category, and keyword.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n**Important:\n✅ Add your NewsAPI Key in the Value field of the X-Api-Key header parameter inside this node.**\n",
+        "height": 416,
+        "width": 416,
+        "color": 7
+      },
+      "id": "35f20456-ac15-4dba-8993-a0aba2027731",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1312,
+        -848
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Prepare Articles & Merge with Config\n\nFormats the articles into plain text and merges them with your country, category, and query setting - providing GPT with clean data and context for accurate analysis.\n\n",
+        "height": 496,
+        "width": 720,
+        "color": 7
+      },
+      "id": "61511a49-baad-4313-98fe-41dbeca152a0",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -800,
+        -928
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## GPT Business Summary\n[Read more about OpenAI Chat Model node](https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatopenai/)\n\nGPT analyzes the news, summarizes the 10 most relevant articles, and tags each as an 🟢 Opportunity, 🔴 Risk, or ⚪ Neutral. \n\nIt also provides an overall trend summary.\nYou can customize the prompt to change the tone, number of articles, add recommendations, or focus on specific business areas.\n",
+        "height": 496,
+        "width": 416,
+        "color": 7
+      },
+      "id": "b0ebce27-81d9-4826-a126-574c30b1eeb6",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        -928
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Post to Slack\n[Read more about Slack node](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack/)\n\nSends the GPT insights directly to your Slack channel.\nYou can customize the message format or destination channel.\n\nMake sure your Slack credentials are connected in this node.\n",
+        "height": 496,
+        "width": 416,
+        "color": 7
+      },
+      "id": "4f368b86-e298-4a3d-ad7e-b127ece0b562",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        480,
+        -928
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Schedule Trigger\n\nThis controls how often the workflow runs — set it to daily, weekly, or any custom interval you need.\n\nAdjust the schedule settings to match how frequently you want news updates sent to Slack.\n",
+        "height": 416,
+        "width": 416,
+        "color": 7
+      },
+      "id": "a2bb2fa7-96ec-4ced-822a-b43dab9876fa",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2304,
+        -848
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 🎥 Demo Video  \n👉 **[Click here to watch the setup guide](https://www.loom.com/share/970a3fba1ed44352a2194f1ef6a8dc45?sid=6750eb3e-9eb9-4400-a6ec-83d2c9de55e4)**  ",
+        "height": 192,
+        "width": 480,
+        "color": 4
+      },
+      "id": "2c794b06-6199-4492-ab85-984c2fa1f655",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1568,
+        -1168
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## 📰 Summarize trending news into Slack with business insights\n\nThis workflow fetches the latest news based on your selected **country, category, and keyword query**, runs it through GPT for **summarization, prioritization, and sentiment analysis**, and posts the output to Slack.\n\n- GPT **prioritizes the 10 most impactful articles**, ensuring you don't get random headlines.\n- Each story is tagged: 🟢 Opportunity, 🔴 Risk, ⚪ Neutral.\n- Ideal for teams who want market or trend updates directly in Slack.\n\n### Who it's for\n- Business leaders, marketers, investors, or analysts who want curated, actionable news summaries.\n- Anyone needing a lightweight **market pulse** delivered via Slack.\n\n### How to Set Up\n1. **Set News Config node:** Define your country, category, and keyword query (e.g., `us`, `technology`, `OpenAI`).\n2. Add your **NewsAPI** and **OpenAI GPT** credentials.\n3. Configure your Slack webhook.\n4. Activate the **Schedule Trigger** to auto-run daily.\n\n### Requirements\n- NewsAPI Key\n- OpenAI API Key\n- Slack Webhook URL\n\n### How to Customize\n- Adjust the **category, country, or query** in the Set News Config node.\n- Remove the **Limit to Top 10 Trends node** to fetch all articles and let GPT filter.\n- Customize the GPT prompt to control tone or depth of insights.\n\nNeed Help?\n\nJoin the [Discord](https://discord.com/invite/XPKeKXeB7d) or ask in the [Forum](https://community.n8n.io/).",
+        "height": 1008,
+        "width": 448
+      },
+      "id": "76641907-9699-429c-bf20-9bd8693a48ea",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -2800,
+        -1136
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You are a business analyst. The user is researching \"{{ $json.query }}\" in the \"{{ $json.category }}\" sector within \"{{ $json.country }}\".\n\nHere are {{ $json.articles.length }} articles. Select the 10 most important based on:\n1. Impact and relevance to \"{{ $json.query }}\"\n2. Business risks, opportunities, or strategic insights\n\nFor each of the 10, summarize in 2-3 lines and also add if it's a:\n- 🔴 Risk\n- 🟢 Opportunity\n- ⚪ Neutral\n\nFinish with a 1-paragraph summary of the overall trend.\n\nHere is the data:\n {{ JSON.stringify($json, null, 2) }}\n\nIf there are no articles, reply that there is no new news."
+            },
+            {
+              "content": "You are a professional trend analyst summarizing news with actionable business insights.\n\nIf there are no articles, reply that there is no new news.",
+              "role": "model"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        128,
+        -656
+      ],
+      "id": "e25624a7-ff40-485a-a446-6142cb00086a",
+      "name": "Message a model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "oXfll8oq8GzIHKdk",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C099PC22V1T",
+          "mode": "list",
+          "cachedResultName": "social"
+        },
+        "text": "={{ $json.content.parts.first().text }} {{ $json.content.parts[1].text }}",
+        "otherOptions": {}
+      },
+      "id": "1110baf3-ecf1-48ce-82b8-7d2682e36470",
+      "name": "Post to Slack1",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        640,
+        -672
+      ],
+      "webhookId": "4a077704-dc20-4afb-a471-9a9ea8c24373",
+      "typeVersion": 2.3,
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "PCc4X3jwdyUIgUdl",
+          "name": "Slack account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-13T13:44:10.000Z",
+  "versionId": "ff288a7c-7d2f-4bd6-91e1-019633fe08d1"
+}
