@@ -516,7 +516,7 @@
               "id": "91627e70-a71a-4be0-a6f6-b04d5c8469d8",
               "name": "repo_path",
               "type": "string",
-              "value": "backup-n8n"
+              "value": ""
             },
             {
               "id": "983a2c87-9d69-4d64-ab88-ec1b1117c6e6",
@@ -729,6 +729,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-13T13:34:16.000Z",
-  "versionId": "77ce6fb7-3e5a-4d68-9c08-59eb18b38fbf"
+  "updatedAt": "2025-08-13T13:43:29.000Z",
+  "versionId": "13670080-26fb-4563-9bbb-9653cee9a18e"
 }
