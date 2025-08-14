@@ -123,7 +123,8 @@
         -2144,
         -656
       ],
-      "typeVersion": 1.2
+      "typeVersion": 1.2,
+      "onError": "continueRegularOutput"
     },
     {
       "parameters": {
@@ -428,6 +429,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-14T14:10:16.000Z",
-  "versionId": "802eeace-5e11-4406-93b7-248a9ee83c26"
+  "updatedAt": "2025-08-14T14:11:54.000Z",
+  "versionId": "4669fec9-292f-40fd-9d24-acde39e44ad9"
 }
