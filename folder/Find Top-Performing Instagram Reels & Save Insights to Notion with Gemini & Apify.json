@@ -1,0 +1,1275 @@
+{
+  "active": false,
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Get Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Owner?": {
+      "main": [
+        [
+          {
+            "node": "Update Accounts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Get dataset items",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Reels": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Map Reels": {
+      "main": [
+        [
+          {
+            "node": "Owner?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Variables": {
+      "main": [
+        [
+          {
+            "node": "Get Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Status": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Prompt": {
+      "main": [
+        [
+          {
+            "node": "Gemini Analyze",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Sources": {
+      "main": [
+        [
+          {
+            "node": "Apify Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Created?": {
+      "main": [
+        [
+          {
+            "node": "Download Video",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Many to One": {
+      "main": [
+        [
+          {
+            "node": "Get Reels",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run an Actor": {
+      "main": [
+        [
+          {
+            "node": "Get Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apify Payload": {
+      "main": [
+        [
+          {
+            "node": "Run an Actor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video": {
+      "main": [
+        [
+          {
+            "node": "Upload to Gemini",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini Analyze": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get File State": {
+      "main": [
+        [
+          {
+            "node": "Is Uploaded And Active?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response": {
+      "main": [
+        [
+          {
+            "node": "Create",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Stats",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Is Created?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Accounts": {
+      "main": [
+        [
+          {
+            "node": "Many to One",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Processing Delay": {
+      "main": [
+        [
+          {
+            "node": "Get File State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload to Gemini": {
+      "main": [
+        [
+          {
+            "node": "Processing Delay",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get dataset items": {
+      "main": [
+        [
+          {
+            "node": "Map Reels",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Uploaded And Active?": {
+      "main": [
+        [
+          {
+            "node": "Set Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Processing Delay",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Variables",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-14T14:58:37.193Z",
+  "id": "IBZfhcJcaTcV6BUe",
+  "isArchived": false,
+  "meta": {
+    "templateId": "5795",
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Find Top-Performing Instagram Reels & Save Insights to Notion with Gemini & Apify",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "4a5efd77-3436-47ab-b4d2-b935ab6c675a",
+      "name": "When clicking ‘Execute workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        832,
+        960
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "24f43c51-020f-8047-9c54-c10191f16fa6",
+          "mode": "list",
+          "cachedResultName": "Sources",
+          "cachedResultUrl": "https://www.notion.so/24f43c51020f80479c54c10191f16fa6"
+        },
+        "returnAll": true,
+        "options": {}
+      },
+      "id": "d8b2fde4-9b9c-4c5e-b0ad-6a549ae1e359",
+      "name": "Get Sources",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        1264,
+        960
+      ],
+      "typeVersion": 2.2,
+      "credentials": {
+        "notionApi": {
+          "id": "Et9LEeMHpceeMBul",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const variables = {\n  // https://apify.com/apify/instagram-scraper \n  // Instagram Scraper = apify/instagram-scraper, \n  \"scrapingActorId\" : \"shu8hvrXbJbY3Eb9W\", // ID of Apify scraper\n  \"daysLimit\" : 7, // Date limit \n  \"resultsLimit\" : 3, // Results per account\n  \"maxDays\" : 2, // Sleeping || Active\n  \"translationLang\" : \"German\",\n}\n\n\nreturn [{json : variables}]"
+      },
+      "id": "c0a40361-98f3-494c-9327-4cf0124a23c3",
+      "name": "Variables",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1056,
+        960
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "// required Simplify = true\n\nconst query = {\n    \"addParentData\": false,\n    \"directUrls\": [],\n    \"enhanceUserSearchWithFacebookPage\": false,\n    \"isUserReelFeedURL\": false,\n    \"isUserTaggedFeedURL\": false,\n    \"onlyPostsNewerThan\": ($('Variables').first().json.daysLimit ?? 10) + ' days',\n    \"resultsLimit\": $('Variables').first().json.resultsLimit ?? 5,\n    \"resultsType\": \"stories\"\n};\n\nconst urls = [];\nconst map = {};\n\nitems.forEach(item => {\n  const username = item.json.property_username || '';\n  if (username) {\n    urls.push('https://www.instagram.com/' + username + '/');\n    map[username.toLowerCase()] = item.json.id;   // Notion pageId\n  }\n});\n\nquery.directUrls = urls;\n\nreturn [\n  {\n    json: {\n      query,\n      urls,\n      map     \n    }\n  }\n];\n"
+      },
+      "id": "b623b654-426a-47a9-a542-e5c5e59ee936",
+      "name": "Apify Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1488,
+        960
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "96d0046b-c9ab-429e-b35c-3d7518564c1b",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $json.status }}",
+                    "rightValue": "SUCCEEDED"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Done"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "5b1c311d-10cf-4e6f-a55c-f311c75ef444",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('Get Status').item.json.status }}",
+                    "rightValue": "RUNNING"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Running"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "8376a12a-87c9-4878-b654-1c91fdfb31a2",
+                    "operator": {
+                      "name": "filter.operator.equals",
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "leftValue": "={{ $('Get Status').item.json.status }}",
+                    "rightValue": "READY"
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Ready"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fe8dfc82-dc6b-4853-9eda-455f60524f4b",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        2144,
+        912
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "id": "daa27537-c568-4a54-819e-7db85443c6cb",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        2368,
+        1072
+      ],
+      "webhookId": "6a6311dc-42d5-4329-93a2-ccd76057b31d",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "resource": "Datasets",
+        "datasetId": "={{ $json.defaultDatasetId }}",
+        "limit": null
+      },
+      "id": "0079000b-1b06-4880-9c05-17cf9703a704",
+      "name": "Get dataset items",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "position": [
+        2368,
+        848
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "apifyApi": {
+          "id": "tcy3QtTjqDZzEHOj",
+          "name": "Apify account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "Actor runs",
+        "operation": "Get run",
+        "runId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        }
+      },
+      "id": "9e6c98b6-d3f1-4ec2-9c6d-677d852f95c1",
+      "name": "Get Status",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "position": [
+        1936,
+        960
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "apifyApi": {
+          "id": "tcy3QtTjqDZzEHOj",
+          "name": "Apify account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "actorSource": "store",
+        "actorId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $('Variables').first().json.scrapingActorId }}"
+        },
+        "customBody": "={{ $json.query.toJsonString() }}"
+      },
+      "id": "026caab9-7afd-4cda-9579-90b1761550ca",
+      "name": "Run an Actor",
+      "type": "@apify/n8n-nodes-apify.apify",
+      "position": [
+        1712,
+        960
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "apifyApi": {
+          "id": "tcy3QtTjqDZzEHOj",
+          "name": "Apify account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.notionPageId }}"
+        },
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Status|select",
+              "selectValue": "={{ $json.publishingStatus }}"
+            },
+            {
+              "key": "Title|title",
+              "title": "={{ $json.ownerFullName }}"
+            },
+            {
+              "key": "URL|url",
+              "urlValue": "={{ $json.inputUrl }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c95743fe-d832-4234-b1f9-058bf3cbc12b",
+      "name": "Update Accounts",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        3024,
+        848
+      ],
+      "typeVersion": 2,
+      "credentials": {
+        "notionApi": {
+          "id": "Et9LEeMHpceeMBul",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": {
+          "__rl": true,
+          "value": "24f43c51-020f-80e3-bf35-d32c8fe239e7",
+          "mode": "list",
+          "cachedResultName": "Reels",
+          "cachedResultUrl": "https://www.notion.so/24f43c51020f80e3bf35d32c8fe239e7"
+        },
+        "returnAll": true,
+        "filterType": "manual",
+        "filters": {
+          "conditions": [
+            {
+              "key": "Date|date",
+              "condition": "after",
+              "date": "={{ new Date(Date.now() - $('Variables').first().json.daysLimit * 24 * 60 * 60 * 1000).toISOString().split('T')[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ec064fce-ec00-4c62-bae0-0be8acb806e1",
+      "name": "Get Reels",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        3472,
+        848
+      ],
+      "executeOnce": false,
+      "typeVersion": 2.2,
+      "alwaysOutputData": true,
+      "credentials": {
+        "notionApi": {
+          "id": "Et9LEeMHpceeMBul",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const accountsMap = {};\n\nitems.forEach(item => {\n  const username = item.json.property_username || '';\n  if (username) {\n    accountsMap[username.toLowerCase()] = item.json.id;   // Notion pageId\n  }\n});\n\nreturn [\n  {\n    json: {\n      accountsMap,\n      items\n    }\n  }\n];\n"
+      },
+      "id": "c403c619-e3ab-403d-a38b-0a7ba2ee72ca",
+      "name": "Many to One",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        3248,
+        848
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "const existingPages = {};\nfor (const page of $items('Get Reels')) {\n  const source = page.json.property_url ?? '';\n  if (source) existingPages[source] = page.json;\n}\n\nconst output = [];\nconst accountsMap = $('Many to One').first().json.accountsMap;\n\nfor (const reel of $items('Map Reels')) {\n\n  const source   = reel.json.url;          \n\n  const views = reel.json.videoViewCount;\n  var update = {\n    \"Code\": reel.json.shortCode,\n    \"SignedCode\": reel.json.shortCode + '-' + Math.random(),\n    \"IsCreated\" : false,\n    \"notionAccountPageId\" : accountsMap[ reel.json.ownerUsername.toLowerCase() ],\n          \"Views\"       : views ? views : reel.json.videoPlayCount,\n          \"Likes\"       : reel.json.likesCount,\n          \"Comments\"    : reel.json.commentsCount,\n          \"Saves\"       : reel.json.savesCount ?? 0,\n          \"Shares\"      : reel.json.sharesCount ?? 0,\n          \"Updated\"   : new Date().toISOString()\n  };\n\n  /* ------------------------------------------------- */\n  if (existingPages[source]) {\n    \n    update.notionPageId = existingPages[source].id;\n\n  } else {\n    update['IsCreated'] = true;\n    update['Caption'] = reel.json.caption;\n    update['URL'] = reel.json.url;\n    update['Hashtags'] = reel.json.hashtags.join(', ');\n    update['Duration'] = reel.json.videoDuration;\n    update['Date'] = reel.json.timestamp;\n    update['videoUrl'] = reel.json.videoUrl;\n    \n  }\n\n  output.push({json: update});\n}\n\nreturn output;   // n8n continues with one array containing both kinds of items\n"
+      },
+      "id": "cd02860b-150e-4559-919f-dcb437a37d1f",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        3696,
+        848
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "jsCode": "const maxDays = $('Variables').first()?.json?.maxDays ?? 3;  \nconst now     = new Date();\n\n\nvar results = items;                             \nconst map   = $('Apify Payload').first().json.map;\n\n\nconst acctStatus = {};   // { username: 'Active' | 'Sleeping' }\n\nfor (const itm of results) {\n  const owner = itm.json.ownerUsername.toLowerCase();\n  const ts    = new Date(itm.json.timestamp);\n  const diff  = (now - ts) / 86_400_000;    \n\n  \n  if (!acctStatus[owner] || acctStatus[owner] === 'Sleeping') {\n    acctStatus[owner] = diff <= maxDays ? 'Active' : 'Sleeping';\n  }\n}\n\nfor (const k in results) {\n  const item   = results[k];\n  const owner  = item.json.ownerUsername.toLowerCase();\n\n  // coauthorProducers - !notionPageId\n  item.json.notionPageId     = map[owner];\n  item.json.publishingStatus = acctStatus[owner];\n\n  results[k] = item;\n}\n\nreturn results;\n"
+      },
+      "id": "c2d2737d-a424-402f-840d-ebca0802e45b",
+      "name": "Map Reels",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        2592,
+        848
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "24f43c51-020f-80e3-bf35-d32c8fe239e7",
+          "mode": "list",
+          "cachedResultName": "Reels",
+          "cachedResultUrl": "https://www.notion.so/24f43c51020f80e3bf35d32c8fe239e7"
+        },
+        "title": "={{ ($json.response.hook ?? $json.Caption).substring(0, 50) }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Date|date",
+              "date": "={{ $json.Date }}"
+            },
+            {
+              "key": "Caption|rich_text",
+              "textContent": "={{ $json.Caption.substring(0, 1995) }}"
+            },
+            {
+              "key": "Duration|number",
+              "numberValue": "={{ $json.Duration }}"
+            },
+            {
+              "key": "Likes|number",
+              "numberValue": "={{ $json.Likes }}"
+            },
+            {
+              "key": "Parsed Date|date",
+              "date": "={{ $now }}"
+            },
+            {
+              "key": "URL|url",
+              "urlValue": "={{ $json.URL }}"
+            },
+            {
+              "key": "Views|number",
+              "numberValue": "={{ $json.Views }}"
+            },
+            {
+              "key": "Comments|number",
+              "numberValue": "={{ $json.Comments }}"
+            },
+            {
+              "key": "Author|relation",
+              "relationValue": [
+                "={{ $json.notionAccountPageId }}"
+              ]
+            },
+            {
+              "key": "Content|rich_text",
+              "textContent": "=### HOOK ###\n{{ $json.response.hook }}\n\n### CONTENT ###\n{{ $json.response.transcription.substring(0, 1800) }}"
+            },
+            {
+              "key": "Translation|rich_text",
+              "textContent": "=### HOOK ###\n{{ $json.response.translation_hook }}\n\n### CONTENT ###\n{{ $json.response.translation.substring(0, 1800) }}"
+            },
+            {
+              "key": "Type|select",
+              "selectValue": "={{ $json.response.format }}"
+            },
+            {
+              "key": "Category|select",
+              "selectValue": "={{ $json.response.category }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8c1e290a-0563-4122-9d5a-f581ee002363",
+      "name": "Create",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        3264,
+        1664
+      ],
+      "typeVersion": 2.2,
+      "credentials": {
+        "notionApi": {
+          "id": "Et9LEeMHpceeMBul",
+          "name": "Notion account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.notionPageId }}"
+        },
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Comments|number",
+              "numberValue": "={{ $json.Comments }}"
+            },
+            {
+              "key": "Likes|number",
+              "numberValue": "={{ $json.Likes }}"
+            },
+            {
+              "key": "Views|number",
+              "numberValue": "={{ $json.Views }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "12f571e0-9bec-46cf-95b2-2ea2f2aed669",
+      "name": "Update",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        1536,
+        1920
+      ],
+      "typeVersion": 2.2,
+      "credentials": {
+        "notionApi": {
+          "id": "Et9LEeMHpceeMBul",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.videoUrl }}",
+        "options": {}
+      },
+      "id": "020b890f-9ebc-4c9c-9ce1-6cefbfa7c7bb",
+      "name": "Download Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1504,
+        1520
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/upload/v1beta/files",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "c1aaeb13-673e-4047-9a41-44730a76692a",
+      "name": "Upload to Gemini",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1728,
+        1520
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "oXfll8oq8GzIHKdk",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\t\"contents\": [{\n\t\t\"parts\": [{\n\t\t\t\"file_data\": {\n\t\t\t\t\"file_uri\": \"{{ $('Is Uploaded And Active?').item.json.uri }}\",\n\t\t\t\t\"mime_type\": \"{{ $('Is Uploaded And Active?').item.json.mimeType }}\"\n\t\t\t}\n\t\t}, {\n\t\t\t\"text\": \"{{ $('Set Prompt').first().json.AnalyzePrompt.replaceAll(\"\\n\", '\\\\n').replaceAll('\"', '\\\"\"') }}\"\n\t\t}]\n\t}]\n}",
+        "options": {}
+      },
+      "id": "2ebc7580-ce55-4c44-bfe0-bfcdc882e648",
+      "name": "Gemini Analyze",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2832,
+        1520
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "oXfll8oq8GzIHKdk",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "8cf67b24-2993-4aed-be9d-00b88a1c5701",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.state }}",
+              "rightValue": "ACTIVE"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8eb1aa31-ab94-4f2d-b49b-716884ad0b6f",
+      "name": "Is Uploaded And Active?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2384,
+        1520
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.file.uri }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "options": {}
+      },
+      "id": "ae320b90-5c01-4892-af10-7e492e0e4776",
+      "name": "Get File State",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2176,
+        1472
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "oXfll8oq8GzIHKdk",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "id": "65a0d019-85a6-4f9b-9402-941179a968d8",
+      "name": "Processing Delay",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        1952,
+        1520
+      ],
+      "webhookId": "3df7acce-81fc-4341-a091-fa1427977cb4",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "jsCode": "\nconst rawText = $input.first().json.candidates[0].content.parts[0].text;\n\nconst cleaned = rawText\n  .replace(/^```json\\s*/, '')      \n  .replace(/\\s*```$/, '')          \n  .trim();\n\nlet parsed;\ntry {\n  parsed = JSON.parse(cleaned);\n} catch (e) {\n  return [{ json: { error: 'Invalid JSON', message: e.message } }];\n}\n\nlet item = $('Is Created?').first().json;\n\nparsed.transcription = parsed.transcription ?? '';\nparsed.hook = parsed.hook ?? '';\nparsed.category = parsed.category ?? '';\nparsed.format = parsed.format ?? '';\nparsed.translation = parsed.translation ?? '';\nparsed.translation_hook = parsed.translation_hook ?? '';\n\nitem.response = parsed;\n\n\nreturn [{ json: item }];\n"
+      },
+      "id": "b8d18c23-f988-49aa-9e25-95a8f35f9d90",
+      "name": "Format Response",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        3056,
+        1520
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "01c3ca92-795f-4528-8df5-204c324c352b",
+              "name": "AnalyzePrompt",
+              "type": "string",
+              "value": "=Perform the following tasks based on the video/audio content:\n\n1. Create a full transcription of the audio — convert speech to text exactly as spoken, without interpretation or summarization, so it can be easily read or re-voiced later.\n\n2. Identify a strong hook from the first few seconds of the content that can grab attention.\n\n3. Determine the category of the content using the following rules:\n- Business: if the video shares business advice\n- Marketing: if the video shares marketing advice\n- Cooking: if the video shares cooking advice\n- Interview: if the video is an interview with a guest\n- Unknown: if the category cannot be determined\n\n4. Identify the video format using the following options:\n- Head: if it's a talking-head video\n- Animation: if it's animated or presented with drawings\n- Unknown: if the format is unclear\n\n5. Translate the full transcription and the hook into {{ $('Variables').first().json.translationLang }}.\n\nReturn the result in **pure JSON format** with the following fields:  \n`transcription`, `hook`, `category`, `format`, `translation`, `translation_hook`.\n\n**Do not include any commentary or explanations. Only return the JSON.**"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6399482e-bc2d-442b-ba99-3a5640966d48",
+      "name": "Set Prompt",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        2624,
+        1552
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "7b88be8b-60c6-47b1-8a6a-4f5b97d71234",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.notionPageId }}",
+              "rightValue": ""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0c5c8d79-18d6-4363-b116-e629beb131f1",
+      "name": "Owner?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2816,
+        848
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "bed205cb-cc58-4f99-af5e-7565257ea7c4",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ $json.IsCreated && $json.notionAccountPageId != null }}",
+                    "rightValue": ""
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Create"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "version": 2,
+                  "leftValue": "",
+                  "caseSensitive": true,
+                  "typeValidation": "strict"
+                },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "id": "042c2e67-6f4d-4909-a73d-eb43864203dd",
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    },
+                    "leftValue": "={{ !$json.IsCreated && $json.notionAccountPageId != null }}",
+                    "rightValue": ""
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "Update"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6b145f77-88f1-4cca-8f10-5588898273ea",
+      "name": "Is Created?",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        1296,
+        1600
+      ],
+      "typeVersion": 3.2
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "12a09949-2880-4d45-b42c-86d9dd681bdb",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1072,
+        1712
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "id": "6e1632c0-7e9f-414f-b040-a50f271a8175",
+      "name": "Stats",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1296,
+        1408
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 4
+            }
+          ]
+        }
+      },
+      "id": "6f3c0c30-dbf4-4af2-95e4-1dfddb420830",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        832,
+        752
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "content": "### 📺 How It Works – Watch the Video  \nI've recorded a video walkthrough to show you how the system works in detail.\n👉 [https://www.youtube.com/watch?v=rdfRNHpHX8o](https://www.youtube.com/watch?v=rdfRNHpHX8o)\n\n\n### 📄 Download Notion Database Structure  \nYou can download the Notion table structure (with all required columns and formats) here:  \n👉 [https://drive.google.com/file/d/1FVaS_-ztp6PDAJbETUb1dkg8IqE4qHqp/view?usp=sharing](https://drive.google.com/file/d/1FVaS_-ztp6PDAJbETUb1dkg8IqE4qHqp/view?usp=sharing)\n\n### ☕ Support the Project  \nIf you'd like to support my work, there's a version with tips available here:\n👉 [Coffee + Sandwich Version](https://gr.egrnkvch.com/l/InstagramReelsTrendWatcher)\n",
+        "height": 360,
+        "width": 520,
+        "color": 7
+      },
+      "id": "33c57a44-f360-468e-a2a7-e068c4370708",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        144,
+        80
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## ⚙️ How to Install the Template\n\n1. **Create the databases in Notion.**  \n   Make sure to use the exact column names and formats as shown in the provided structure.\n\n2. **Import the workflow template into n8n.**\n\n3. **Add your Credentials:**\n   - **Notion**: Standard Notion integration  \n   - **Apify**: Create and connect your Apify API key\n\n4. **Gemini API is used via HTTP Request node.**  \n   Use the following settings:  \n   - `Authentication`: **Predefined Credential Type**  \n   - `Credential Type`: **Google Gemini (PaLM) API**  \n   - `Host`: `https://generativelanguage.googleapis.com`  \n   - API key: your personal Gemini API key\n\n5. **Assign these credentials** in the corresponding nodes inside the workflow.\n\n6. **Configure the Variables node** to set parsing parameters.  \n   Test the process with 3–5 accounts, each with 3–5 Reels.  \n   Once everything works, update the Variables with your full settings.\n",
+        "height": 580,
+        "width": 520,
+        "color": 7
+      },
+      "id": "c54a9b93-96ee-4341-8ac2-a7d691fbe70d",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        736,
+        80
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "### 📺 Video Guide\n👉 [https://www.youtube.com/watch?v=rdfRNHpHX8o](https://www.youtube.com/watch?v=rdfRNHpHX8o)\n\n@[youtube](rdfRNHpHX8o)",
+        "height": 140,
+        "width": 520,
+        "color": 7
+      },
+      "id": "e615416a-2340-4542-962c-d7e5d4ec5f32",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        144,
+        512
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Database = Sources",
+        "height": 80,
+        "width": 180
+      },
+      "id": "6a1ddd04-60ef-408b-b085-7d68083c5792",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1232,
+        864
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Database = Reels",
+        "height": 80,
+        "width": 180
+      },
+      "id": "415ebd32-ea91-4f36-b742-728b6fc8090e",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3424,
+        720
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Database = Reels",
+        "height": 80,
+        "width": 180
+      },
+      "id": "f561f7ec-8bdd-4d14-b1cc-e8e50db0f592",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3248,
+        1568
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "This is the prompt used to process video content and classify its category and type. Customize it based on your logic.",
+        "height": 100,
+        "width": 300
+      },
+      "id": "ce17a033-a3f3-4e2e-b322-f1f7942bde52",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2544,
+        1392
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-14T16:22:20.000Z",
+  "versionId": "2634baa6-4093-4bd5-bc0f-c663e8304aed"
+}
