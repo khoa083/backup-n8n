@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "Schedule Trigger": {
       "main": [
@@ -109,7 +109,10 @@
       "parameters": {
         "rule": {
           "interval": [
-            {}
+            {
+              "field": "cronExpression",
+              "expression": "10 21 * * *"
+            }
           ]
         }
       },
@@ -418,9 +421,13 @@
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
   "tags": [],
-  "triggerCount": 0,
-  "updatedAt": "2025-08-13T14:18:28.000Z",
-  "versionId": "8a36bebf-14ee-408f-a7ca-37c145a6a5b2"
+  "triggerCount": 1,
+  "updatedAt": "2025-08-14T14:10:16.000Z",
+  "versionId": "802eeace-5e11-4406-93b7-248a9ee83c26"
 }
