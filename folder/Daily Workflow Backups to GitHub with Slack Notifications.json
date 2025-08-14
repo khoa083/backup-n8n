@@ -552,7 +552,8 @@
         "rule": {
           "interval": [
             {
-              "triggerAtHour": 21
+              "field": "cronExpression",
+              "expression": "10 21 * * *"
             }
           ]
         }
@@ -564,7 +565,10 @@
         848,
         400
       ],
-      "typeVersion": 1.2
+      "typeVersion": 1.2,
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "onError": "continueRegularOutput"
     },
     {
       "parameters": {
@@ -776,6 +780,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-13T14:24:07.000Z",
-  "versionId": "a561e765-5101-424d-98c5-8e03638ec595"
+  "updatedAt": "2025-08-14T14:11:30.000Z",
+  "versionId": "8cfc245e-7940-4e07-a25c-cbd7589cb14a"
 }
