@@ -70,7 +70,7 @@
         ],
         [
           {
-            "node": "Completed Notification1",
+            "node": "Error Notification",
             "type": "main",
             "index": 0
           }
@@ -753,7 +753,7 @@
         "otherOptions": {}
       },
       "id": "bcdde490-8f0e-47b8-a352-e1485a5ce9bb",
-      "name": "Completed Notification1",
+      "name": "Error Notification",
       "type": "n8n-nodes-base.slack",
       "position": [
         2992,
@@ -780,6 +780,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-14T14:11:30.000Z",
-  "versionId": "8cfc245e-7940-4e07-a25c-cbd7589cb14a"
+  "updatedAt": "2025-08-15T13:06:03.000Z",
+  "versionId": "d9cb2024-d832-4dde-b7be-6c540103c19f"
 }
