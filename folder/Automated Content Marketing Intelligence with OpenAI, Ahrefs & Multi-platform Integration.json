@@ -234,12 +234,7 @@
       "main": [
         [
           {
-            "node": "💾 Save to Airtable - Competitors",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "💾 Save to Airtable - Keywords",
+            "node": "📢 Send Slack Alert",
             "type": "main",
             "index": 0
           },
@@ -249,7 +244,12 @@
             "index": 0
           },
           {
-            "node": "📢 Send Slack Alert",
+            "node": "💾 Save to Airtable - Keywords",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "💾 Save to Airtable - Competitors",
             "type": "main",
             "index": 0
           }
@@ -486,7 +486,8 @@
         1728,
         800
       ],
-      "typeVersion": 4
+      "typeVersion": 4,
+      "disabled": true
     },
     {
       "parameters": {
@@ -609,14 +610,13 @@
     },
     {
       "parameters": {
-        "pageId": {
+        "resource": "database",
+        "databaseId": {
           "__rl": true,
-          "mode": "url",
-          "value": "",
-          "__regex": "(?:https|http)://www\\.notion\\.so/(?:[a-z0-9-]{2,}/)?(?:[a-zA-Z0-9-]{1,}-)?([0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12})"
+          "mode": "list",
+          "value": ""
         },
-        "simple": false,
-        "options": {}
+        "simple": false
       },
       "id": "cbbecb7f-eb99-4f75-a9ce-07a7a9037b5a",
       "name": "📝 Save to Notion",
@@ -749,38 +749,6 @@
     },
     {
       "parameters": {
-        "method": "POST",
-        "url": "https://api.openai.com/v1/chat/completions",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            {
-              "name": "Content-Type",
-              "value": "application/json"
-            }
-          ]
-        },
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {}
-          ]
-        },
-        "options": {}
-      },
-      "id": "50d64d8e-1905-492a-97c4-f8978bd34931",
-      "name": "🔧 OpenAI HTTP Request Alternative",
-      "type": "n8n-nodes-base.httpRequest",
-      "position": [
-        2368,
-        864
-      ],
-      "typeVersion": 4
-    },
-    {
-      "parameters": {
         "errorMessage": "error"
       },
       "id": "4501e9b6-8c01-4e77-b963-26b3f792fa03",
@@ -827,6 +795,38 @@
       ],
       "typeVersion": 4,
       "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "50d64d8e-1905-492a-97c4-f8978bd34931",
+      "name": "🔧 OpenAI HTTP Request Alternative",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2368,
+        864
+      ],
+      "typeVersion": 4
     }
   ],
   "pinData": {},
@@ -834,6 +834,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-14T14:54:52.000Z",
-  "versionId": "d634b44c-1efe-41d9-b4f6-a580f464915f"
+  "updatedAt": "2025-08-15T13:04:23.000Z",
+  "versionId": "c16b869e-0334-4b58-8418-43e924df2443"
 }
