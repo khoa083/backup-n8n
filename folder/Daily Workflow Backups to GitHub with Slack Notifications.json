@@ -552,8 +552,8 @@
         "rule": {
           "interval": [
             {
-              "field": "cronExpression",
-              "expression": "10 14 * * *"
+              "triggerAtHour": 21,
+              "triggerAtMinute": 32
             }
           ]
         }
@@ -784,6 +784,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-16T14:27:27.000Z",
-  "versionId": "307021fa-4b8a-43a3-8463-15d8fc5d7e38"
+  "updatedAt": "2025-08-16T14:31:14.000Z",
+  "versionId": "4d7045ee-b93b-4c6b-ac02-e2835e0ce522"
 }
