@@ -553,7 +553,7 @@
           "interval": [
             {
               "field": "cronExpression",
-              "expression": "10 21 * * *"
+              "expression": "10 14 * * *"
             }
           ]
         }
@@ -772,7 +772,11 @@
     }
   ],
   "pinData": {},
-  "settings": {},
+  "settings": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionOrder": "v1"
+  },
   "staticData": {
     "node:Schedule Trigger": {
       "recurrenceRules": []
@@ -780,6 +784,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-15T13:06:03.000Z",
-  "versionId": "d9cb2024-d832-4dde-b7be-6c540103c19f"
+  "updatedAt": "2025-08-16T14:27:27.000Z",
+  "versionId": "307021fa-4b8a-43a3-8463-15d8fc5d7e38"
 }
