@@ -111,7 +111,7 @@
           "interval": [
             {
               "field": "cronExpression",
-              "expression": "10 21 * * *"
+              "expression": "10 14 * * *"
             }
           ]
         }
@@ -429,6 +429,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-14T14:11:54.000Z",
-  "versionId": "4669fec9-292f-40fd-9d24-acde39e44ad9"
+  "updatedAt": "2025-08-16T13:47:35.000Z",
+  "versionId": "737d9e27-1363-407d-b58d-dfbdd16d36d7"
 }
