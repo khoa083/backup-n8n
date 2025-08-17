@@ -553,7 +553,7 @@
           "interval": [
             {
               "triggerAtHour": 21,
-              "triggerAtMinute": 32
+              "triggerAtMinute": 10
             }
           ]
         }
@@ -784,6 +784,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-16T14:31:14.000Z",
-  "versionId": "4d7045ee-b93b-4c6b-ac02-e2835e0ce522"
+  "updatedAt": "2025-08-16T14:32:31.000Z",
+  "versionId": "32035c88-ee7f-496f-951e-d72ff23715d2"
 }
