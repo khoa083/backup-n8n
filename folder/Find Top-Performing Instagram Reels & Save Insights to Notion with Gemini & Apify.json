@@ -1142,7 +1142,7 @@
         "rule": {
           "interval": [
             {
-              "triggerAtHour": 4
+              "field": "cronExpression"
             }
           ]
         }
@@ -1266,10 +1266,14 @@
     }
   ],
   "pinData": {},
-  "settings": {},
+  "settings": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionOrder": "v1"
+  },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-14T16:22:20.000Z",
-  "versionId": "2634baa6-4093-4bd5-bc0f-c663e8304aed"
+  "updatedAt": "2025-08-18T12:52:42.000Z",
+  "versionId": "5cfa30a5-4885-436c-8913-02c314d9fc2e"
 }
