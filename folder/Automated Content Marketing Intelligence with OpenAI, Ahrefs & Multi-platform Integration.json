@@ -270,8 +270,8 @@
         "rule": {
           "interval": [
             {
-              "field": "cronExpression",
-              "expression": "10 21 * * *"
+              "triggerAtHour": 21,
+              "triggerAtMinute": 10
             }
           ]
         }
@@ -830,10 +830,14 @@
     }
   ],
   "pinData": {},
-  "settings": {},
+  "settings": {
+    "timezone": "Asia/Ho_Chi_Minh",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionOrder": "v0"
+  },
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-15T13:04:23.000Z",
-  "versionId": "c16b869e-0334-4b58-8418-43e924df2443"
+  "updatedAt": "2025-08-19T13:36:57.000Z",
+  "versionId": "3469f86e-f6f9-46eb-a1e7-1fb0f8333068"
 }
