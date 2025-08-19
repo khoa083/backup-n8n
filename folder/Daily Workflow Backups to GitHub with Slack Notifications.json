@@ -205,6 +205,12 @@
           }
         ]
       ]
+    },
+    "Error Notification": {
+      "main": [
+        [],
+        []
+      ]
     }
   },
   "createdAt": "2025-08-12T15:02:10.138Z",
@@ -675,7 +681,7 @@
           "mode": "list",
           "cachedResultName": "github-to-slack"
         },
-        "text": "=Information_source:  Starting Workflow Backup [{{ $execution.id }}]",
+        "text": "=Information_source:  Starting Workflow Backup 😎😎😎 [{{ $execution.id }}]",
         "otherOptions": {
           "includeLinkToWorkflow": false
         }
@@ -749,7 +755,7 @@
           "mode": "list",
           "cachedResultName": "github-to-slack"
         },
-        "text": "=Backup has error - {{ $json.name }}",
+        "text": "=Backup has error 😢😢😢 - {{ $json.name }}",
         "otherOptions": {}
       },
       "id": "bcdde490-8f0e-47b8-a352-e1485a5ce9bb",
@@ -784,6 +790,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-08-16T14:32:31.000Z",
-  "versionId": "32035c88-ee7f-496f-951e-d72ff23715d2"
+  "updatedAt": "2025-08-19T13:41:17.000Z",
+  "versionId": "ab0bef45-dce5-4690-9bbe-9c9ef308ae31"
 }
